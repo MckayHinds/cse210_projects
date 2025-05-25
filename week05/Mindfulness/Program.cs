@@ -13,6 +13,12 @@ class Program
             Console.WriteLine("2. Reflection Activity");
             Console.WriteLine("3. Listing Activity");
             Console.WriteLine("4. Quit Program");
+            string choice = Console.ReadLine();
+        }
+        switch (choice)
+        {
+            case "1":
+                BreathingActivity b = new BreathingActivity
         }
     }
 
