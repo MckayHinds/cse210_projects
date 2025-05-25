@@ -16,6 +16,16 @@ class Program
             Console.WriteLine("Breathe out.");
 
         }
+        else if (choice == "2") ;
+        {
+            Console.WriteLine("Lets begin our reflection session");
+            Console.WriteLine("Think of a situation this past week that you could have handled differently.");
+        }
+        else
+        {
+            Console.WriteLine("Lets begin our Ponder and list session.");
+            
+        }
     }
 
 }
