@@ -4,27 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Mindfullness Project");
-        Console.WriteLine("Please Pick One: 1. Breathing Exersizes 2. Reflection 3. Ponder and List");
-        string choice = Console.ReadLine();
-        if (choice == "1") ;
+        bool running = true;
+        while (running)
         {
-            Console.WriteLine("Lets begin our breathing session.");
-            Console.WriteLine("Take a deep breath in.");
-            Console.WriteLine("Hold...");
-            Thread.Sleep(15000);
-            Console.WriteLine("Breathe out.");
-
-        }
-        else if (choice == "2") ;
-        {
-            Console.WriteLine("Lets begin our reflection session");
-            Console.WriteLine("Think of a situation this past week that you could have handled differently.");
-        }
-        else
-        {
-            Console.WriteLine("Lets begin our Ponder and list session.");
-            Console.WriteLine("Write down some things you are grateful for.");
+            Console.WriteLine("Mindfulness Activity");
+            Console.WriteLine("Please select a number below.");
+            Console.WriteLine("1. Breathing Activity");
+            Console.WriteLine("2. Reflection Activity");
+            Console.WriteLine("3. Listing Activity");
+            Console.WriteLine("4. Quit Program");
         }
     }
 
