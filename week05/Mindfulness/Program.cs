@@ -24,7 +24,7 @@ class Program
         else
         {
             Console.WriteLine("Lets begin our Ponder and list session.");
-            
+            Console.WriteLine("Write down some things you are grateful for.");
         }
     }
 
