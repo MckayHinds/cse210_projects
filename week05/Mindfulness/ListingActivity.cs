@@ -15,6 +15,19 @@ public class ListingActivity : Activity
     public ListingActivity(string name, string description) : base(name, description) { }
     public void Run()
     {
-        
+        DisplayStartingMessage();
+        Console.WriteLine();
+        GetRandomFromList(_prompts);
+        Console.WriteLine("Take some time to consider the prompts");
+        Console.WriteLine("Start writing in: ");
+        ShowCountdown(10);
+
+        //Date & time stuff
+        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        while (DateTime.Now < endTime)
+        {
+            Console.ReadLine();
+            _count++;
+        }
     }
 }
