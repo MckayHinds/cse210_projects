@@ -14,12 +14,24 @@ class Program
             Console.WriteLine("3. Listing Activity");
             Console.WriteLine("4. Quit Program");
             string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+                    BreathingActivity b = new BreathingActivity("Thank you for selecting the Breathing activity.");
+                    b.run();
+                    break;
+                case "2":
+                    ReflectionActivity r = new ReflectionActivity("");
+                    break;
+                case "3":
+                    ListingActivity l = new ListingActivity("");
+                    break;
+                case "4":
+                    running = false;
+                    break;
+            }
         }
-        switch (choice)
-        {
-            case "1":
-                BreathingActivity b = new BreathingActivity
-        }
+        Console.WriteLine("Thank you for joining out Mindful Activity"); 
     }
 
 }
