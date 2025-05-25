@@ -29,7 +29,6 @@ public class ListingActivity : Activity
             Console.ReadLine();
             _count++;
         }
-        Console.Clear();
         Console.WriteLine($"You listed {_count} items");
         DisplayEndingMessage();
     }

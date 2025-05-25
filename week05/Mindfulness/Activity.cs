@@ -14,7 +14,6 @@ public class Activity
     }
     public void DisplayStartingMessage()
     {
-        Console.Clear();
         Console.WriteLine($"{_name}: {_description}");
         Console.Write("Enter your desired Duration in Seconds");
         string input = Console.ReadLine();

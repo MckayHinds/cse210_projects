@@ -23,7 +23,6 @@ public class ReflectionActivity : Activity
     public void Run()
     {
         DisplayStartingMessage();
-        Console.Clear();
         GetRandomFromList(_prompts);
         Console.WriteLine("Think for a moment: ");
         ShowCountdown(10);
@@ -38,7 +37,6 @@ public class ReflectionActivity : Activity
             ShowSpinner(1);
             seconds++;
         }
-        Console.Clear();
         DisplayEndingMessage();
     }
     private void GetRandomFromList(List<string> list)
