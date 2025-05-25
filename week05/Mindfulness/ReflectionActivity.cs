@@ -25,6 +25,18 @@ public class ReflectionActivity : Activity
         DisplayStartingMessage();
         Console.Clear();
         GetRandomFromList(_prompts);
-        
+        Console.WriteLine("Think for a moment: ");
+        ShowCountdown(10);
+
+        int seconds = 0;
+        while (seconds < _duration)
+        {
+            if (seconds % 10 == 0)
+            {
+                GetRandomFromList(_questions);
+            }
+            ShowSpinner(1);
+            seconds++;
+        }
     }
 }
