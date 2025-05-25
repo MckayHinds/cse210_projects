@@ -35,16 +35,27 @@ public class Activity;
     {
         Console.Write("-");
         Thread.Sleep(200);
-        Console.Write("");
-        Console.Write("");
+        Console.Write("\b \b");
+        Console.Write("\\");
         Thread.Sleep(200);
-        Console.Write("");
-        Console.Write("");
+        Console.Write("\b \b");
+        Console.Write("|");
         Thread.Sleep(200);
-        Console.Write("");
-        Console.Write("");
+        Console.Write("\b \b");
+        Console.Write("/");
         Thread.Sleep(200);
-        Console.Write("");
+        Console.Write("\b \b");
     }
+    }
+    public void ShowCountdown(int seconds)
+    {
+    for (int i = seconds; i > 0; i--)
+        {
+        String numStr = i.ToString();
+        Console.Write(i);
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+        Console.Write(new string('\b', numStr.Length));
+        }
     }
 }
