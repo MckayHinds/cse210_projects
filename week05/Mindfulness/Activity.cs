@@ -31,17 +31,20 @@ public class Activity;
     }
     public void ShowSpinner(int seconds) // Problem Child
     {
+    for (int i = 0; i < seconds; i++)
+    {
         Console.Write("-");
-    Thread.Sleep(200);
+        Thread.Sleep(200);
         Console.Write("");
         Console.Write("");
-    Thread.Sleep(200);
+        Thread.Sleep(200);
         Console.Write("");
         Console.Write("");
-    Thread.Sleep(200);
+        Thread.Sleep(200);
         Console.Write("");
         Console.Write("");
-    Thread.Sleep(200);
+        Thread.Sleep(200);
         Console.Write("");
+    }
     }
 }
