@@ -12,14 +12,21 @@ public class Activity;
         _description = description;
     }
     public void DisplayStartingMessage()
-    {
+{
     Console.Clear();
     Console.WriteLine($"{_name}: {_description}");
     Console.WriteLine("Enter desired activity duration in seconds: ");
     string duration = Console.ReadLine();
     try
     {
-
+        _duration = int.Parse(duration);
     }
+    catch
+    {
+        Console.WriteLine("That is not an acceptable input, please use whole numbers");
+    }
+    // Countdown
+    Console.WriteLine("Starting in");
+    ShowCountdown(5);
     }
 }
