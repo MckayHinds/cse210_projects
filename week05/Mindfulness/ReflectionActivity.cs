@@ -38,5 +38,13 @@ public class ReflectionActivity : Activity
             ShowSpinner(1);
             seconds++;
         }
+        Console.Clear();
+        DisplayEndingMessage();
+    }
+    private void GetRandomFromList(List<string> list)
+    {
+        Random rand = new Random();
+        int index = rand.Next(list.Count);
+        Console.WriteLine(list[index]);
     }
 }
