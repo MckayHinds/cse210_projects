@@ -11,5 +11,21 @@ public class ListingActivity : Activity
         "What have you accomplished this week?"
     };
     public ListingActivity(string name, string description) : base(name, description) { }
-    
+    public void Run()
+    {
+        DisplayStartingMessage();
+        Console.WriteLine();
+        GetRandomIntList(_prompts);
+        Console.WriteLine("Take some time to consider the prompt.");
+        Console.WriteLine("Writing in: ");
+        ShowCoundown(20);
+        Console.WriteLine();
+        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        while (DateTime.Now < endTime)
+        {
+            Console.ReadLine();
+            _count++;
+        }
+
+    }
 }
