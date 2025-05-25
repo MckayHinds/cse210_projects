@@ -26,6 +26,14 @@ public class ListingActivity : Activity
             Console.ReadLine();
             _count++;
         }
-
+        Console.Clear();
+        Console.WriteLine($"You listed {_count} items");
+        DisplayEndingMessage();
+    }
+    public void GetRandomIntList(List<string> list)
+    {
+        Random rand = new Random();
+        int Index = rand.Next(list.Count);
+        Console.WriteLine(list[index]);
     }
 }
