@@ -12,25 +12,29 @@ class Program
             Console.WriteLine("2. Reflection Activity");
             Console.WriteLine("3. Listing Activity");
             Console.WriteLine("4. Quit Program");
+            Console.Write("Enter your choice:");
+
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case "1":
-                    BreathingActivity b = new BreathingActivity("Thank you for selecting the Breathing activity.");
+                    var b = new BreathingActivity("This Activity will help you calm yourself through Breathing");
                     b.Run();
-                    break;
                 case "2":
-                    ReflectionActivity r = new ReflectionActivity("");
-                    break;
+                    var r = new ReflectionActivity("This Activity will help you calm yourself through Reflection");
+                    r.Run();
                 case "3":
-                    ListingActivity l = new ListingActivity("");
-                    break;
+                    var l = new ListingActivity("This Activity will help you calm yourself through Listing");
+                    l.Run();
                 case "4":
                     running = false;
                     break;
+                default:
+                    Console.WriteLine("Please Enter a Valid Choice");
+                    break;
             }
         }
-        Console.WriteLine("Thank you for joining out Mindful Activity"); 
-    }
 
+        Console.WriteLine("Thank you for trying the Mindful Activity!");
+    }
 }
