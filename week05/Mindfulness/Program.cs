@@ -18,7 +18,7 @@ class Program
             {
                 case "1":
                     BreathingActivity b = new BreathingActivity("Thank you for selecting the Breathing activity.");
-                    b.run();
+                    b.Run();
                     break;
                 case "2":
                     ReflectionActivity r = new ReflectionActivity("");

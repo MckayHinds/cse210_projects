@@ -1,12 +1,12 @@
 using System;
 using System.Threading;
-public class Activity;
+public class Activity
 {
     private string _name;
     private string _description;
     protected interface _duration;
 
-    public Activity(string name, string _description);
+    public Activity(string name, string description);
     {
         _name = name;
         _description = description;
@@ -31,26 +31,17 @@ public class Activity;
     }
     public void ShowSpinner(int seconds) // Problem Child
     {
-    for (int i = 0; i < seconds; i++)
+    string[] spinner = { "|", "/", "-", "\\" };
     {
-        Console.Write("-");
-        Thread.Sleep(200);
-        Console.Write("\b \b");
-        Console.Write("\\");
-        Thread.Sleep(200);
-        Console.Write("\b \b");
-        Console.Write("|");
-        Thread.Sleep(200);
-        Console.Write("\b \b");
-        Console.Write("/");
-        Thread.Sleep(200);
-        Console.Write("\b \b");
+        Console.Write(spinner[i % 4]);
+        Thread.Sleep(250);
+        Console.Write("\b");
     }
     }
     public void ShowCountdown(int seconds)
     {
     for (int i = seconds; i > 0; i--)
-        {
+    {
         String numStr = i.ToString();
         Console.Write(i);
         Thread.Sleep(1000);

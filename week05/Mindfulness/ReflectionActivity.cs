@@ -43,6 +43,6 @@ public class ReflectionActivity : Activity
     {
         Random rand = new Random();
         int index = rand.Next(list.Count);
-        Console.WriteLine(list[index]);
+        Console.WriteLine(list[ind])
     }
 }

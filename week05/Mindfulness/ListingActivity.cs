@@ -34,6 +34,6 @@ public class ListingActivity : Activity
     {
         Random rand = new Random();
         int Index = rand.Next(list.Count);
-        Console.WriteLine(list[index]);
+        Console.WriteLine(list[index:]);
     }
 }

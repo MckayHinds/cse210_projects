@@ -28,6 +28,6 @@ public class BreathingActivity : Activity
             seconds++;
         }
         Console.Clear();
-        DisplayEndingMessage();
+        DisplayEndingMessage()
     }
 }
