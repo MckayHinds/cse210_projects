@@ -9,7 +9,6 @@ public class BreathingActivity : Activity
         int seconds = 0;
         while (seconds < _duration)
         {
-            Console.Clear();
             Console.Write("Take a deep breath in");
             for (int i = 0; i < 4 && seconds < _duration; i++)
             {
