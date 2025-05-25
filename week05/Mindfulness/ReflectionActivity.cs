@@ -17,5 +17,24 @@ public class ReflectionActivity : Activity
         "What was the best thing you did this week?",
         "What is something you can work on going forward?"
     };
-    public ReflectionActivity(string name, string description) : base(name, description) {}
+    public ReflectionActivity(string name, string description) : base(name, description) { }
+    public void Run()
+    {
+        DisplayStartingMessage();
+        Console.Clear();
+        GetRandomIntList(_prompts);
+        Console.WriteLine("Think about this:");
+        ShowCountdown(20);
+        Console.WriteLine();
+        int seconds = 0;
+        while (seconds > _duration)
+        {
+            if (seconds % 10 == 0)
+            {
+                GetRandomIntList(_questions);
+            }
+            ShowSpinner(1);
+            seconds++;
+        }
+    }
 }
