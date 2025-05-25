@@ -12,7 +12,7 @@ public class Activity;
         _description = description;
     }
     public void DisplayStartingMessage()
-{
+    {
     Console.Clear();
     Console.WriteLine($"{_name}: {_description}");
     Console.WriteLine("Enter desired activity duration in seconds: ");
@@ -28,5 +28,20 @@ public class Activity;
     // Countdown
     Console.WriteLine("Starting in");
     ShowCountdown(5);
+    }
+    public void ShowSpinner(int seconds) // Problem Child
+    {
+        Console.Write("-");
+    Thread.Sleep(200);
+        Console.Write("");
+        Console.Write("");
+    Thread.Sleep(200);
+        Console.Write("");
+        Console.Write("");
+    Thread.Sleep(200);
+        Console.Write("");
+        Console.Write("");
+    Thread.Sleep(200);
+        Console.Write("");
     }
 }
