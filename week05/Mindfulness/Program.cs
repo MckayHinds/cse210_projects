@@ -18,19 +18,22 @@ class Program
             switch (choice)
             {
                 case "1":
-                    var b = new BreathingActivity("This Activity will help you calm yourself through Breathing");
+                    var b = new BreathingActivity("Breathing", "This activity will help you relax by guiding you through slow breathing.");
                     b.Run();
+                    break;
                 case "2":
-                    var r = new ReflectionActivity("This Activity will help you calm yourself through Reflection");
+                    var r = new ReflectionActivity("Reflection", "This activity will help you reflect on the good things in your life.");
                     r.Run();
+                    break;
                 case "3":
-                    var l = new ListingActivity("This Activity will help you calm yourself through Listing");
+                    var l = new ListingActivity("Listing", "This activity will help you focus by listing items.");
                     l.Run();
+                    break;
                 case "4":
                     running = false;
                     break;
                 default:
-                    Console.WriteLine("Please Enter a Valid Choice");
+                    Console.WriteLine("Please enter a valid choice.");
                     break;
             }
         }
