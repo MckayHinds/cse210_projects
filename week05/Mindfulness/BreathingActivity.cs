@@ -2,6 +2,13 @@ using System;
 using System.Threading;
 public class BreathingActivity : Activity
 {
+    private string v;
+
+    public BreathingActivity(string v)
+    {
+        this.v = v;
+    }
+
     public BreathingActivity(string name, string description) : base(name, description) { }
     public void Run()
     {
@@ -10,7 +17,7 @@ public class BreathingActivity : Activity
         while (seconds < _duration)
         {
             Console.Clear();
-            Console.write("Breathe In.");
+            Console.Write("Breathe In.");
             for (int i = 0; i < 4; i++)
             {
                 if (seconds >= _duration) break;
@@ -22,12 +29,18 @@ public class BreathingActivity : Activity
             Console.WriteLine();
             Console.Write("Breathe Out.")
             for (int i = 0; i < 10; i++)
+            {
                 if (seconds >= _duration) break;
+            }
             Console.Write(".");
             Thread.Sleep(1000);
             seconds++;
         }
         Console.Clear();
-        DisplayEndingMessage()
+        DisplayEndingMessage();
+    }
+    private void DisplayEndingMessage()
+    {
+        throw new NotImplementedException();
     }
 }

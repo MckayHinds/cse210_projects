@@ -17,7 +17,15 @@ public class ReflectionActivity : Activity
         "What was the best thing you did this week?",
         "What is something you can work on going forward?"
     };
+    private string v;
+
     public ReflectionActivity(string name, string description) : base(name, description) { }
+
+    public ReflectionActivity(string v)
+    {
+        this.v = v;
+    }
+
     public void Run()
     {
         DisplayStartingMessage();
@@ -39,6 +47,11 @@ public class ReflectionActivity : Activity
         Console.Clear();
         DisplayEndingMessage();
     }
+    private void DisplayEndingMessage()
+    {
+        throw new NotImplementedException();
+    }
+
     public void GetRandomIntList(List<string> list)
     {
         Random rand = new Random();
