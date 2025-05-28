@@ -16,7 +16,7 @@ public class BreathingActivity : Activity
                 Thread.Sleep(1000);
                 seconds++;
             }
-            Console.Write("Take a deep breath in");
+            Console.Write("Breathe Out");
             for (int i = 0; i < 6 && seconds < _duration; i++)
             {
                 Console.Write(".");
