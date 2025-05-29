@@ -5,4 +5,8 @@ public class Square : Shape
     {
         side = _side;
     }
+    public override float GetArea()
+    {
+        return _side * _side;
+    }
 }
