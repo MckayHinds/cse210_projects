@@ -4,6 +4,10 @@ public class SimpleGoal : Goal
 
     public SimpleGoal(string name, string description, int points) : base(name, description, points)
     {
-        _isComplete false;
+        _isComplete = false;
+    }
+    public override bool isComplete()
+    {
+        return _isComplete; 
     }
 }
