@@ -21,7 +21,7 @@ public class ChecklistGoal : Goal
     }
     public override bool isComplete()
     {
-
+        return _ammountCompleted >= _target;
     }
     public override string GetDetailsString()
     {
