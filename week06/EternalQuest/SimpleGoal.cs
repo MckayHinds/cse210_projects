@@ -6,8 +6,13 @@ public class SimpleGoal : Goal
     {
         _isComplete = false;
     }
+    public override int RecordEvent()
+    {
+        _isComplete = true;
+        return _points;
+    }
     public override bool isComplete()
     {
-        return _isComplete; 
+        return _isComplete;
     }
 }
