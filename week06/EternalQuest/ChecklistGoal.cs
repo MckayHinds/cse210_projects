@@ -12,7 +12,12 @@ public class ChecklistGoal : Goal
     }
     public override int RecordEvent()
     {
-
+        _ammountCompleted++;
+        if (_ammountCompleted == _target)
+        {
+            return _points + _bonus;
+        }
+        return _points;
     }
     public override bool isComplete()
     {
