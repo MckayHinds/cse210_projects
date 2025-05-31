@@ -15,6 +15,8 @@ public abstract class Goal
     public abstract bool isComplete();
     public virtual string GetDetailsString()
     {
-        
+        //I cant be doing this right
+        return $"[{(isComplete() ? "X" : " ")}] {_shortName} ({_description})";
     }
+    public abstract string GetStringRepresentation();
 }
