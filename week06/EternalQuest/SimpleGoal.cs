@@ -6,15 +6,18 @@ public class SimpleGoal : Goal
     {
         _isComplete = false;
     }
+
     public override int RecordEvent()
     {
         _isComplete = true;
         return _points;
     }
+
     public override bool isComplete()
     {
         return _isComplete;
     }
+    
     public override string GetStringRepresentation()
     {
         return $"SimpleGoal:{_shortName},{_description},{_points},{_isComplete}";
