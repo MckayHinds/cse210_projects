@@ -102,7 +102,16 @@ public class GoalManager
             {
                 writer.WriteLine(goal.GetStringRepresentation());
             }
-            
+
         }
+    }
+    //This one is rediculously long.
+    public void LoadGoals()
+    {
+        Console.Write("Enter File Name: ");
+        string filename = Console.ReadLine();
+        string[] lines = File.ReadAllLines(filename);
+        _score = int.Parse(lines[0]);
+        _goals.Clear();
     }
 }
