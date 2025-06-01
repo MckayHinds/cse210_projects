@@ -120,6 +120,7 @@ public class GoalManager
             string type = parts[0];
             string[] data = parts[1].Split(",");
 
+            //Reconstructing Goal Objects
             if (type == "SimpleGoal")
             {
                 //For some reason this looks really complicated to me but it actually is pretty simple.
@@ -127,9 +128,17 @@ public class GoalManager
                 if (bool.Parse(data[3])) sg.RecordEvent();
                 _goals.Add(sg);
             }
+
             else if (type == "EternalGoal")
             {
                 _goals.Add(new EternalGoal(data[0], data[1], int.Parse(data[2])));
+            }
+
+            else if (type == "ChecklistGoal")
+            {
+                var cg = new ChecklistGoal(data[0], data[1], int.Parse(data[2]), int.Parse(data[3]), int.Parse(data[4]));
+                for (int j = 0; j < int.Parse(data[5]); j++) cg.RecordEvent();
+                _goals.Add(cg);
             }
         }
     }
