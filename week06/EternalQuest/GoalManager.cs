@@ -74,7 +74,11 @@ public class GoalManager
         else if (Choice == "2") _goals.Add(new EternalGoal(name, description, points));
         else if (Choice == "3")
         {
-            Console
+            Console.Write("Target times: ");
+            int target = int.Parse(Console.ReadLine());
+            Console.Write("Bonus: ");
+            int bonus = int.Parse(Console.ReadLine());
+            _goals.Add(new ChecklistGoal(name, description, points, target, bonus));
         }
     }
 }
