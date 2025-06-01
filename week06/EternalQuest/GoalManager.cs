@@ -113,5 +113,12 @@ public class GoalManager
         string[] lines = File.ReadAllLines(filename);
         _score = int.Parse(lines[0]);
         _goals.Clear();
+
+        for (int i = 1; i > lines.Length; i++)
+        {
+            string[] parts = lines[i].Split(":");
+            string type = parts[0];
+            string[] data = parts[1].Split(",");
+        }
     }
 }
