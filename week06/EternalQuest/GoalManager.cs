@@ -44,4 +44,19 @@ public class GoalManager
             Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
         }
     }
+    public void ListGoalDetails()
+    {
+        foreach (Goal goal in _goals)
+        {
+            Console.WriteLine(goal.GetDetailsString());
+        }
+    }
+    public void CreateGoal()
+    {
+        Console.WriteLine("Goal Types: ");
+        Console.WriteLine("1. Simple Goal");
+        Console.WriteLine("2. Eternal Goal");
+        Console.WriteLine("3. Checklist Goal");
+        Console.Write("What type do you want to work on?");
+    }
 }
