@@ -85,6 +85,24 @@ public class GoalManager
     {
         ListGoalNames();
         Console.Write("What goal were you able to accomplish? ");
-        int index = int.Parse(Console.ReadLine()) -1;
+        int index = int.Parse(Console.ReadLine()) - 1;
+        int points = _goals[index].RecordEvent();
+        _score += points;
+        Console.WriteLine($"You earned {points} points!");
+    }
+    public void SaveGoals()
+    {
+        Console.Write("Enter File Name: ");
+        string filename = Console.ReadLine();
+        //StreamWriter! trying out some different functions rather than what I am used to. - Scrap if doesn't work*
+        using (StreamWriter writer = new StreamWriter(filename))
+        {
+            writer.WriteLine(_score);
+            foreach (Goal goal in _goals)
+            {
+                writer.WriteLine(goal.GetStringRepresentation());
+            }
+            
+        }
     }
 }
