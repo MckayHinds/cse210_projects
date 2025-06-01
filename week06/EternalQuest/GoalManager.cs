@@ -119,6 +119,18 @@ public class GoalManager
             string[] parts = lines[i].Split(":");
             string type = parts[0];
             string[] data = parts[1].Split(",");
+
+            if (type == "SimpleGoal")
+            {
+                //For some reason this looks really complicated to me but it actually is pretty simple.
+                var sg = new SimpleGoal(data[0], data[1], int.Parse(data[2]));
+                if (bool.Parse(data[3])) sg.RecordEvent();
+                _goals.Add(sg);
+            }
+            else if (type == "EternalGoal")
+            {
+                _goals.Add(new EternalGoal(data[0], data[1], int.Parse(data[2])));
+            }
         }
     }
 }
