@@ -11,6 +11,18 @@ public class GoalManager
         string input = "";
         while (input != "7")
         {
+            Console.WriteLine("--------------------");
+            Console.WriteLine($"You have {_score} points.");
+            Console.WriteLine("Menu Options");
+            Console.WriteLine("1. Create New Goals.");
+            Console.WriteLine("2. List Goals");
+            Console.WriteLine("3. Save Goals");
+            Console.WriteLine("4. Load Goals");
+            Console.WriteLine("5. Record Event");
+            Console.WriteLine("6. Display Prayer Info");
+            Console.WriteLine("7. Quit");
+            Console.Write("Select a Choice");
+            input = Console.ReadLine();
             
         }
     }
