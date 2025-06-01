@@ -53,10 +53,28 @@ public class GoalManager
     }
     public void CreateGoal()
     {
+        //Goal Types
         Console.WriteLine("Goal Types: ");
         Console.WriteLine("1. Simple Goal");
         Console.WriteLine("2. Eternal Goal");
         Console.WriteLine("3. Checklist Goal");
         Console.Write("What type do you want to work on?");
+        string Choice = Console.ReadLine();
+
+        //Name,Description,Points
+        Console.Write("Name: ");
+        string name = Console.ReadLine();
+        Console.Write("Description: ");
+        string description = Console.ReadLine();
+        Console.Write("Points: ");
+        int points = int.Parse(Console.ReadLine());
+
+        //Choices
+        if (Choice == "1") _goals.Add(new SimpleGoal(name, description, points));
+        else if (Choice == "2") _goals.Add(new EternalGoal(name, description, points));
+        else if (Choice == "3")
+        {
+            Console
+        }
     }
 }
