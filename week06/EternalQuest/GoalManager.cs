@@ -32,4 +32,16 @@ public class GoalManager
             else if (input == "6") DisplayPlayerInfo();
         }
     }
+    public void DisplayPlayerInfo()
+    {
+        Console.WriteLine($"Current Score: {_score}");
+    }
+    public void ListGoalNames()
+    {
+        for (int i = 0; i < _goals.Count; i++)
+        {
+            //this part is a bit confusing but I think this is right
+            Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
+        }
+    }
 }
