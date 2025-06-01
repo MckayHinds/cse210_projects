@@ -23,7 +23,13 @@ public class GoalManager
             Console.WriteLine("7. Quit");
             Console.Write("Select a Choice");
             input = Console.ReadLine();
-            
+
+            if (input == "1") CreateGoal();
+            else if (input == "2") ListGoalDetails();
+            else if (input == "3") SaveGoals();
+            else if (input == "4") LoadGoals();
+            else if (input == "5") RecordEvent();
+            else if (input == "6") DisplayPlayerInfo();
         }
     }
 }
