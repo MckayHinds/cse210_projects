@@ -81,4 +81,10 @@ public class GoalManager
             _goals.Add(new ChecklistGoal(name, description, points, target, bonus));
         }
     }
+    public void RecordEvent()
+    {
+        ListGoalNames();
+        Console.Write("What goal were you able to accomplish? ");
+        int index = int.Parse(Console.ReadLine()) -1;
+    }
 }

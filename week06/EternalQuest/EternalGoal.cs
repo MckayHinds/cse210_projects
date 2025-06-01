@@ -1,4 +1,4 @@
-public class EternalGoal : Goal
+public class EternalGoal : Goal //Problem Child
 {
     public EternalGoal(string name, string description, int points) : base(name, description, points)
     {
