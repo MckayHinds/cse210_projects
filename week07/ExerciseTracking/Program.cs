@@ -7,7 +7,9 @@ class Program
     {
         List<Activity> activities = new List<Activity>
         {
-            
-        }
+            new Running()
+            new Cycling()
+            new Swimming()
+        };
     }
 }
