@@ -8,6 +8,14 @@ public abstract class Activity
         _date = date;
         _minutes = minutes;
     }
-    public DateTime Date => date;
+    public DateTime Date => _date;
     public int Minutes => _minutes;
+
+    public abstract double GetDistance();
+    public abstract double GetSpeed();
+    public abstract double GetPace();
+    public virtual string GetSummary()
+    {
+        
+    }
 }
